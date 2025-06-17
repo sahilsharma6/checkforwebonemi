@@ -10,7 +10,9 @@ const sendToken = (user, statusCode, res) => {
   console.log(token);
   const options = {
     expires: new Date(Date.now() + config.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
-    httpOnly: true,
+httpOnly: true,
+  secure: true, // required for HTTPS
+  sameSite: "None", // for cross-origin cookie sharing
   };
 
   res.status(statusCode).cookie("token", token, options).json({
