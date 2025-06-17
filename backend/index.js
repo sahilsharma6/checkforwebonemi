@@ -11,7 +11,7 @@ import cookieParser from "cookie-parser";
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://seagreen-hedgehog-575300.hostingersite.com",
     credentials: true,
   })
 );
