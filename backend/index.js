@@ -18,6 +18,12 @@ app.use(
 
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true }));
+app.get("/h", (req, res) => {
+  res.json({
+    success: "ok",
+  });
+});
+
 
 app.use(cookieParser());
 
